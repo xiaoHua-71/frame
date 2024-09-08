@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="com.mysql:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/com_mysql_jar</output-path>
+    <root id="archive" name="com.mysql.jar">
+      <element id="module-output" name="com.mysql" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,60 @@
+<configuration>
+
+<!--    配置文件-->
+
+    <property name = "pattern" value = "%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n" />
+
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 使用默认的 PatternLayoutEncoder -->
+        <encoder>
+            <pattern>${pattern}</pattern>
+        </encoder>
+<!--        过滤器-->
+        <file class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>debug</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </file>
+
+    </appender>
+
+    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+
+    </appender>
+
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>E:\AAAJavaRoute\Second_frame\backlog2.log</file>
+        <!-- 使用 PatternLayoutEncoder 作为 encoder -->
+        <encoder>
+            <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ROLL" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>E:\AAAJavaRoute\Second_frame\ROLL.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <maxFileSize>1024</maxFileSize>
+            <maxHistory>3</maxHistory>
+            <fileNamePattern>E:\AAAJavaRoute\Second_frame\logback6.%d{yyyy-MM-dd}.log%i.gz</fileNamePattern>
+        </rollingPolicy>
+        <!-- 使用 PatternLayoutEncoder 作为 encoder -->
+        <encoder>
+            <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+
+    <root level="debug">
+        <!--FILE Appender -->
+        <appender-ref ref="FILE" />
+<!--&lt;!&ndash;        滚动输出&ndash;&gt;-->
+<!--        <appender-ref ref="ROLL" />-->
+<!--        控制台输出-->
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

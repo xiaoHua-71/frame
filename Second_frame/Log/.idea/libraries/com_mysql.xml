@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.mysql">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../com.mysql/out/artifacts/com_mysql_jar/com.mysql.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

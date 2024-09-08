@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="userDao" name="dao,userDao" class="com.xiaohua.UserDao">-->
+<!--        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash;第一个方法是静态方法 要注意的是静态方法必须使用：属性class指定包含工厂方法的类&ndash;&gt;-->
+<!--    <bean name = "userService" class="com.xiaohua.UserService"-->
+<!--    factory-method="create"/>-->
+
+<!--    &lt;!&ndash;第二个方法是实例方法 实例方法可以使用factory-bean加载需要使用的工厂&ndash;&gt;-->
+<!--    <bean name="userDao" factory-bean="userService" factory-method="create2"/>-->
+
+<!--    <alias name="userDao" alias="dao2"/>-->
+    <bean class="com.xiaohua.MyBeanFactoryPostProcessor"/>
+    <bean class="com.xiaohua.UserDao" name="userDao"/>
+    <bean class="com.xiaohua.AddressDao" name="addressDao"/>
+
+    <bean name="userService" class="com.xiaohua.UserService">
+<!--        使用setter方法进行注入-->
+        <property name="userDao" ref="userDao"/>
+        <property name="addressDao" ref="addressDao"/>
+    </bean>
+<!--lazy 懒加载-->
+    <bean class="com.xiaohua.Address" name="address" lazy-init="false"/>
+
+    <bean name="user" class="com.xiaohua.User">
+        <property name="name" value="lilyl"/>
+        <property name="age" value="12"/>
+<!--        <property name="address" ref="address"/>-->
+        <property name="friends">
+            <list>
+                <value>zhangsan</value>
+                <value>lisi</value>
+            </list>
+        </property>
+        <property name="hobby">
+            <array>
+                <value>basketball</value>
+                <value>rap</value>
+                <value>dance</value>
+                <value>sing</value>
+            </array>
+        </property>
+        <property name="parents">
+            <map>
+                <entry key="mother" value="28"/>
+                <entry key="father" value="28"/>
+            </map>
+        </property>
+    </bean>
+
+<!--    <bean name="a" class="com.xiaohua.User" p:name="zhangs" p:/>-->
+
+
+    <!-- more bean definitions go here -->
+
+</beans>

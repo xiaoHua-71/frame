@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+<!--开始注解必须加的-->
+    <context:annotation-com.com.xiaohua.config/>
+
+<!--    <bean class="com.com.xiaohua.A" init-method="init1" destroy-method="destroy1"/>-->
+
+<!--    <bean name="address" class="com.com.xiaohua.Address" p:name="hello"/>-->
+
+    <bean class="com.com.xiaohua.Boy"/>
+<!--    父类有多个子类，可以使用primary进行选择一个主要的-->
+    <bean class="com.com.xiaohua.Dog"  name="dog"/>
+    <bean class="com.com.xiaohua.Cat" name="cat"/>
+    <bean class="com.com.xiaohua.Address"/>
+
+</beans>

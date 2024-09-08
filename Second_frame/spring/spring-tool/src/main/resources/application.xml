@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.com.xiaohua.Employee">
+        <property name="name" value="lucy"/>
+        <property name="birthday" value="2001-2-2"/>
+        <property name="salary" value="#{T (java.lang.Math).random() * 10000}"/>
+
+    </bean>
+
+    <bean class="com.com.xiaohua.Company" id="company">
+        <property name="name" value="12"/>
+        <property name="managingDirector" value="12"/>
+
+    </bean>
+
+
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="com.com.xiaohua.EmployeeEditor" value="com.com.xiaohua.EmployeeEditor"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <bean class="com.com.xiaohua.StringToDateConvertor"/>
+        </property>
+    </bean>
+
+
+</beans>

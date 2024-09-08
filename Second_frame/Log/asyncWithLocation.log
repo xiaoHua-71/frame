@@ -1,0 +1,124 @@
+2024-08-27 21:52:37,480 ERROR c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:21) error 
+2024-08-27 21:52:37,496 WARN c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:22) warn 
+2024-08-27 21:52:37,480 ERROR c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:21) error 
+2024-08-27 21:52:37,496 WARN c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:22) warn 
+2024-08-27 21:52:37,496 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:23) info 
+2024-08-27 21:52:37,496 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:23) info 
+2024-08-27 21:52:37,496 DEBUG c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:24) debug 
+2024-08-27 21:52:37,496 DEBUG c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:24) debug 
+2024-08-27 21:52:37,496 TRACE c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:25) trace 
+2024-08-27 21:52:37,496 TRACE c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:25) trace 
+2024-08-27 21:52:37,500 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:30) lucy今年18岁了！ 
+2024-08-27 21:52:37,500 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:30) lucy今年18岁了！ 
+2024-08-27 21:52:37,500 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:36) 出现异常： java.lang.ArithmeticException: / by zero
+	at com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+
+2024-08-27 21:52:37,500 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:36) 出现异常： java.lang.ArithmeticException: / by zero
+	at com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+
+2024-08-27 21:53:22,057 ERROR c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:21) error 
+2024-08-27 21:53:22,057 WARN c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:22) warn 
+2024-08-27 21:53:22,057 ERROR c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:21) error 
+2024-08-27 21:53:22,057 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:23) info 
+2024-08-27 21:53:22,057 WARN c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:22) warn 
+2024-08-27 21:53:22,057 DEBUG c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:24) debug 
+2024-08-27 21:53:22,057 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:23) info 
+2024-08-27 21:53:22,057 DEBUG c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:24) debug 
+2024-08-27 21:53:22,057 TRACE c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:25) trace 
+2024-08-27 21:53:22,057 TRACE c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:25) trace 
+2024-08-27 21:53:22,057 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:30) lucy今年18岁了！ 
+2024-08-27 21:53:22,057 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:30) lucy今年18岁了！ 
+2024-08-27 21:53:22,057 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:36) 出现异常： java.lang.ArithmeticException: / by zero
+	at com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+
+2024-08-27 21:53:22,057 INFO c.x.TestSlf4j [main] com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:36) 出现异常： java.lang.ArithmeticException: / by zero
+	at com.xiaohua.TestSlf4j.testSlf4j(TestSlf4j.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+

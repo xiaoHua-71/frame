@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaohua.mapper.UserMapper">
+
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache" size="1024" eviction="FIFO" flushInterval="100" readOnly="true" blocking="true" />
+
+<!--    resultMap可以给数据库中的字段起别名 -->
+<!--    可以仅写需要写的-->
+    <resultMap id="userMap" type="user">
+<!--        在config中使用驼峰命名就会把user_name 改为 userName，而mysql中不区分大小写-->
+<!--        因此这个写法也就不用写了-->
+        <result column="user_name" property="username"/>
+    </resultMap>
+<!--    sql片段-->
+    <sql id="sql">
+        id,user_name,password
+    </sql>
+
+
+    <select id="selectAll" resultMap="userMap">
+        select <include refid="sql"></include>
+        from user
+    </select>
+
+
+    <select id="selectByUser" resultMap="userMap">
+        select * from user
+        <where>
+
+        <!--         test 表示一个if条件-->
+        <if test="id != null">
+            and id = #{id}
+        </if>
+
+        <if test="user_name != null and user_name !=''">
+            and `user_name` = #{username}
+        </if>
+
+        <if test="password != null and password !=''">
+            and `password` = #{password}
+        </if>
+        </where>
+
+    </select>
+
+
+
+<!--    <select id="selectByUser" resultMap="userMap">-->
+<!--        select * from user-->
+<!--        <where>-->
+<!--            <choose>-->
+<!--                <when test="id != null">-->
+<!--                    and id =#{id}-->
+<!--                </when>-->
+
+<!--                <when test="username != null and username != ''">-->
+<!--                    and user_name =#{username}-->
+<!--                </when>-->
+
+<!--                <when test="password != null and password != ''">-->
+<!--                    and password =#{password}-->
+<!--                </when>-->
+
+<!--            </choose>-->
+<!--        </where>-->
+
+<!--    </select>-->
+
+
+
+
+    <select id="selectUserOne" resultType="com.xiaohua.entity.User">
+                            -- 这个${}也是形参，只有一个参数的时候，大括号里面的东西不重要
+        select * from user where id = ${xxx}
+    </select>
+
+    <select id="select" resultType="com.xiaohua.entity.User">
+--两个参数要与接口里面的变量相对应
+        select * from user where username = #{username} and password = #{password}
+    </select>
+
+    <select id="selectByMap" resultType="com.xiaohua.entity.User">
+        select * from user where username = #{username} and password = #{password}
+    </select>
+
+    <select id="selectByUsername" resultType="com.xiaohua.entity.User">
+        select * from user where user_name like #{userName}
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert  into `user`(id,user_name,password) values(#{id},#{username},#{password})
+    </insert>
+
+
+
+    <update id="update">
+        update `user`
+                          <set>
+                <if test="username != null and username != ''">
+                    user_name=#{username},
+                </if>
+
+                <if test="password != null and password != ''">
+                    password=#{password},
+                </if>
+                          </set>
+              <where>
+                  <if test="id != null">
+                      and id = #{id}
+                  </if>
+              </where>
+
+
+    </update>
+
+
+
+    <update id="delete">
+        delete from `user` where id = #{id}
+    </update>
+
+    <delete id="deleteByIds">
+        delete from `user`
+        where id in
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectByIds" resultType="user">
+        select * from `user`
+        where id in
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+
+
+    </select>
+
+    <insert id="batchInsert" parameterType="list" >
+        insert into `user`(user_name,password)
+        values
+        <foreach collection="users" item="user" separator=",">
+            (#{user.username},#{user.password})
+        </foreach>
+
+    </insert>
+
+    <delete id="batchDeleteByIds" parameterType="user">
+        delete from `user`
+        where id in
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+           #{id}
+        </foreach>
+
+    </delete>
+
+
+
+</mapper>

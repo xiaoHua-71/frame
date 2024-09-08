@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <aop:config>
+        <aop:aspect id="myAspect" ref="myAop">
+            <aop:pointcut id="pointCut" expression="execution(* com.com.xiaohua..*(..))"/>
+<!--            <aop:before  pointcut="execution(* com.com.xiaohua..*(..))" method="beforeAdvice"/>-->
+<!--            <aop:after method="afterAdvice" pointcut-ref="pointCut"/>-->
+<!--            <aop:after-returning method="afterReturningAdvice" pointcut-ref="pointCut"/>-->
+<!--            <aop:after-throwing throwing="ex" method="afterThrowing" pointcut-ref="pointCut"/>-->
+            <aop:around method="around" pointcut-ref="pointCut"/>
+
+        </aop:aspect>
+    </aop:config>
+
+    <bean id="myAop" class="com.com.xiaohua.aspecj.MyAop"/>
+    <bean id="orderService" class="com.com.xiaohua.service.impl.OrderService"/>
+    <bean id="userService" class="com.com.xiaohua.service.impl.UserService"/>
+
+</beans>

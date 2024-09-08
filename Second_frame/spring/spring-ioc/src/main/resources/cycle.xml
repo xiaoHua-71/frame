@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--原型作用域 scope-->
+    <bean name="a" class="com.com.xiaohua.A" p:b-ref="b" scope="prototype"/>
+    <bean name="b" class="com.com.xiaohua.B" p:a-ref="a"/>
+
+<!--&lt;!&ndash;    构造注入&ndash;&gt;-->
+<!--        <bean name="a" class="com.com.xiaohua.A">-->
+<!--            <constructor-arg name="b" ref="b"/>-->
+<!--        </bean>-->
+
+<!--    <bean name="b" class="com.com.xiaohua.B">-->
+<!--        <constructor-arg name="a" ref="a"/>-->
+<!--    </bean>-->
+
+</beans>
