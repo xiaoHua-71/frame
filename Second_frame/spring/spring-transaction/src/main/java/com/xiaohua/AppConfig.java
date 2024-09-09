@@ -56,13 +56,13 @@ public class AppConfig {
         dataSourceTransactionManager.setDataSource(dataSource);
         return dataSourceTransactionManager;
     }
-
-    @Bean
-    public TransactionTemplate transactionTemplate(TransactionManager transactionManager){
-        TransactionTemplate transactionTemplate = new TransactionTemplate();
-        transactionTemplate.setTransactionManager((PlatformTransactionManager) transactionManager);
-        return transactionTemplate;
-    }
+//
+//    @Bean
+//    public TransactionTemplate transactionTemplate(TransactionManager transactionManager){
+//        TransactionTemplate transactionTemplate = new TransactionTemplate();
+//        transactionTemplate.setTransactionManager((PlatformTransactionManager) transactionManager);
+//        return transactionTemplate;
+//    }
 
 
 
